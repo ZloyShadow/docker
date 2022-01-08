@@ -15,3 +15,4 @@ RUN usermod -a -G Efremov Valentin
 RUN chown -R Valentin:Efremov /var/www/company.com
 RUN sed -i 's|/var/www/html|/var/www/company.com|g' /etc/nginx/sites-enabled/default
 RUN sed -i 's|user www-data;|user Valentin;|g' /etc/nginx/nginx.conf
+RUN nginx
